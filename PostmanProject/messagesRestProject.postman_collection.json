@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "4963fc41-4fc4-4ad0-a4c8-bf82ea380ef2",
+		"name": "messagesRestProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sendMessage",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"sender\": \"george\",\r\n\t\"receiver\": \"adrian\",\r\n\t\"subject\": \"test\",\r\n\t\"content\": \"content deneme\",\r\n\t\"sentDate\": \"2019-12-22T18:40:49Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/messages/",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"messages",
+						""
+					]
+				},
+				"description": "sendMessage"
+			},
+			"response": []
+		},
+		{
+			"name": "sendMessage Fault",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"sender\": \"george\",\r\n\t\"receiver\": \"adrian\",\r\n\t\"subject\": \"test\",\r\n\t\"sentDate\": \"2019-12-22T18:40:49Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/messages/",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"messages",
+						""
+					]
+				},
+				"description": "sendMessage"
+			},
+			"response": []
+		},
+		{
+			"name": "findIncomingMessages",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8082/messages/byReceiver/george",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"messages",
+						"byReceiver",
+						"george"
+					]
+				},
+				"description": "findIncomingMessages"
+			},
+			"response": []
+		},
+		{
+			"name": "findSentMessages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/messages/bySender/george",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"messages",
+						"bySender",
+						"george"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "readMessageDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/messages/byId/5dfe8483b248307a3ec2ed06",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"messages",
+						"byId",
+						"5dfe8483b248307a3ec2ed06"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estimateMessageCountWeek",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/messages/estimateMessageCount/week",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"messages",
+						"estimateMessageCount",
+						"week"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estimateMessageCountDay",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/messages/estimateMessageCount/day",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"messages",
+						"estimateMessageCount",
+						"day"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estimateMessageCount Fault",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/messages/estimateMessageCount/month",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"messages",
+						"estimateMessageCount",
+						"month"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
