@@ -1,3 +1,7 @@
+use test;
+
+db.createCollection("messages");
+
 db.messages.insertMany([
   {
     "sender": "paul",
