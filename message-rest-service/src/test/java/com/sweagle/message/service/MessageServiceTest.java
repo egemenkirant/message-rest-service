@@ -112,7 +112,7 @@ public class MessageServiceTest {
     	
     	dailyMsgCount = new MessageCountEntity();
     	dailyMsgCount.setCount(1);
-    	dailyMsgCount.setDayOfMonth(24);
+    	dailyMsgCount.setDayOfYear(24);
     	
     	weeklyMsgCount = new MessageCountEntity();
     	weeklyMsgCount.setCount(5);

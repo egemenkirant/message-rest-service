@@ -29,7 +29,7 @@ public class MessageDaoImpl implements MessageDao{
 	public List<MessageCountEntity> findMessageCountGroupByDatePeriod(String period) {
 		String expPeriod=period;
 		if(MessageConstants.PERIOD_DAILY.equals(period)) {
-			expPeriod = MessageConstants.EXP_DAY_OF_MONTH;
+			expPeriod = MessageConstants.EXP_DAY_OF_YEAR;
 		}
 		Aggregation agg = newAggregation(
 			    project("sentDate")

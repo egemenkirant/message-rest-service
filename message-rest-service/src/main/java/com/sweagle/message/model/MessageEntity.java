@@ -15,12 +15,15 @@ public class MessageEntity {
 	private String subject;
 	private String content;
 	private Date sentDate;
+	private String read;
 	
+	
+
 	public MessageEntity() {
 		super();
 	}
 
-	public MessageEntity(String id, String sender, String receiver, String subject, String content, Date sentDate) {
+	public MessageEntity(String id, String sender, String receiver, String subject, String content, Date sentDate, String read) {
 		super();
 		this.id = id;
 		this.sender = sender;
@@ -28,6 +31,7 @@ public class MessageEntity {
 		this.subject = subject;
 		this.content = content;
 		this.sentDate = sentDate;
+		this.read=read;
 	}
 	
 	public String getId() {
@@ -65,6 +69,13 @@ public class MessageEntity {
 	}
 	public void setSentDate(Date sentDate) {
 		this.sentDate = sentDate;
+	}
+	public String getRead() {
+		return read;
+	}
+
+	public void setRead(String read) {
+		this.read = read;
 	}
 	
 	@Override

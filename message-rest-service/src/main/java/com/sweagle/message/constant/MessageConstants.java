@@ -4,7 +4,7 @@ public class MessageConstants {
 
 	public static final String PERIOD_DAILY="day";
 	public static final String PERIOD_WEEKLY="week";
-	public static final String EXP_DAY_OF_MONTH="dayOfMonth";
+	public static final String EXP_DAY_OF_YEAR="dayOfYear";
 	public static final String MSG_SUCCESS = "Message added successfully";
 	public static final String MSG_ESTIMATEDCOUNT = "Number of total messages that will be sent probably for the rest of the ";
 	

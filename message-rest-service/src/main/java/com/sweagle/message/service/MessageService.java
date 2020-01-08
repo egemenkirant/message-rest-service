@@ -8,6 +8,8 @@ import com.sweagle.message.model.MessageEntity;
 public interface MessageService {
 	
 	String sendMessage(MessageEntity message) throws SystemException;
+	
+	String updateMessage(MessageEntity message) throws SystemException;
     
     List<MessageEntity> findIncomingMessages(String receiver);
     

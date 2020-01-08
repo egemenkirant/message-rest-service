@@ -3,7 +3,7 @@ package com.sweagle.message.model;
 public class MessageCountEntity {
 	
 	
-	private int dayOfMonth;
+	private int dayOfYear;
 	private int week;
 	private int count;
 	
@@ -11,12 +11,12 @@ public class MessageCountEntity {
 		super();
 	}
 
-	public int getDayOfMonth() {
-		return dayOfMonth;
+	public int getDayOfYear() {
+		return dayOfYear;
 	}
 
-	public void setDayOfMonth(int dayOfMonth) {
-		this.dayOfMonth = dayOfMonth;
+	public void setDayOfYear(int dayOfYear) {
+		this.dayOfYear = dayOfYear;
 	}
 
 	public int getWeek() {
@@ -37,7 +37,7 @@ public class MessageCountEntity {
 
 	@Override
 	public String toString() {
-		return "MessageCountEntity [dayOfMonth=" + dayOfMonth + ", week=" + week + ", count=" + count + "]";
+		return "MessageCountEntity [dayOfMonth=" + dayOfYear + ", week=" + week + ", count=" + count + "]";
 	}
 
 	

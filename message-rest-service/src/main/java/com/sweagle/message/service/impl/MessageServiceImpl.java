@@ -37,6 +37,12 @@ public class MessageServiceImpl implements MessageService{
 		messageRepository.insert(message);
 		return MessageConstants.MSG_SUCCESS;
 	}
+	
+	@Override
+	public String updateMessage(MessageEntity message) throws SystemException {
+		messageRepository.save(message);
+		return MessageConstants.MSG_SUCCESS;
+	}
 
 	@Override
 	public List<MessageEntity> findIncomingMessages(String receiver) {
@@ -82,10 +88,10 @@ public class MessageServiceImpl implements MessageService{
 			Calendar cal = Calendar.getInstance();
 			//-1 because of the week calculation difference between mongodb aggregation and Calendar
 			int week = cal.get(Calendar.WEEK_OF_YEAR)-1;
-			int today = cal.get(Calendar.DAY_OF_MONTH);
+			int today = cal.get(Calendar.DAY_OF_YEAR);
 			
 			//control if first element is today or in this week
-			if(cloneList.get(0).getDayOfMonth()==today || cloneList.get(0).getWeek()==week) {				
+			if(cloneList.get(0).getDayOfYear()==today || cloneList.get(0).getWeek()==week) {				
 				lastPeriodCount=cloneList.get(0).getCount();
 				cloneList.remove(0);
 			}			
@@ -101,5 +107,7 @@ public class MessageServiceImpl implements MessageService{
 		}
 		return returnMessage;		
 	}
+
+	
 
 }
